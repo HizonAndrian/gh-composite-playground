@@ -7,6 +7,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
     - name: Call composite Action
+      id: greet
       uses: ./.github/actions
       with:
         who-to-greet: "Developer"
+    
+    - name: Output
+      run: echo "The repository name is: ${{steps.greet.outputs.name-of-repo}}"

@@ -8,7 +8,6 @@ inputs:
 outputs:
   name-of-repo:
     description: 'The name of repository'
-    value: ${{ steps.repo-name.outputs.name-of-repo }}
 runs:
   using: 'composite'
   steps:
@@ -23,5 +22,5 @@ runs:
     - name: Repository name
       id: repo-name
       run: |
-        echo "name-of-repo=$(basename $GITHUB_REPOSITORY)" >> $GITHUB_OUTPUT
+        echo "repo_name=${GITHUB_REPOSITORY}" >> $GITHUB_OUTPUT
       shell: bash
