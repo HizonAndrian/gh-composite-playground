@@ -12,6 +12,6 @@ run:
       run: |
         echo 'Hi, $ENV_GREET'
         echo 'Thanks for accessing me.'
-      bash: shell 
+      shell: bash 
       env:
-        ENV_GREET: ${{inputs.who-to-greet}}
+        ENV_GREET: ${{ inputs.who-to-greet }}
