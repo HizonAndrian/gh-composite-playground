@@ -23,5 +23,5 @@ runs:
     - name: Repository name
       id: repo-name
       run: |
-        echo "repo_name=${GITHUB_REPOSITORY}" >> $GITHUB_OUTPUT
+        echo "repo_name='${{GITHUB_REPOSITORY}}'">> $GITHUB_OUTPUT
       shell: bash
