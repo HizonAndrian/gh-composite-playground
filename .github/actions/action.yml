@@ -24,3 +24,4 @@ runs:
       id: repo-name
       run: |
         echo "name-of-repo=$(basename $GITHUB_REPOSITORY)" >> $GITHUB_OUTPUT
+      shell: bash
