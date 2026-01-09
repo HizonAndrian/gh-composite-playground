@@ -13,4 +13,4 @@ jobs:
         who-to-greet: "Developer"
     
     - name: Output
-      run: echo "The repository name is: ${{steps.greet.outputs.name-of-repo}}"
+      run: echo "The repository name is ${{steps.greet.outputs.name-of-repo}}"
