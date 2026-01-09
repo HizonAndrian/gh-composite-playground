@@ -4,6 +4,8 @@ jobs:
   greet_job:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: action/checkout@v4
     - name: Call composite Action
       uses: ./.github/actions
       with:
