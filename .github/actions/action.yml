@@ -1,0 +1,17 @@
+name: 'Composite Action'
+description: 'User input'
+inputs:
+  who-to-greet: #id of the input
+    description: 'who to greet'
+    required: true
+    default: 'Andrian'
+run:
+  using: 'composite'
+  steps:
+    - name: Print the greetings
+      run: |
+        echo 'Hi, $ENV_GREET'
+        echo 'Thanks for accessing me.'
+      bash: shell 
+      env:
+        ENV_GREET: ${{inputs.who-to-greet}}
