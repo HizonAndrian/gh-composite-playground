@@ -5,12 +5,12 @@ inputs:
     description: 'who to greet'
     required: true
     default: 'Andrian'
-run:
+runs:
   using: 'composite'
   steps:
     - name: Print the greetings
       run: |
-        echo 'Hi, $ENV_GREET'
+        echo "Hi, $ENV_GREET."
         echo 'Thanks for accessing me.'
       shell: bash 
       env:
